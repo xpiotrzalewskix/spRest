@@ -34,17 +34,18 @@ Delete item(s) from the list based on item(s) id(s) passed in an array.
 parameter [object]
 
 	parameter [object]
-		NAME		  |	MAN./OPT.	|	DEFAULT			  |	TYPE	  |	INFO										                  |	REMARKS
-		listName	|	mandatory	|					      |	string	|												                    |
-		url			  |	optional	|	current url		|	string	|												                    |
-		async		  |	optional	|	true			    |	boolean	|	asynchronous call							            |
-		expand		|	optional	|	none			    |	array	  |	used for lookup and person/group fields 	|	Field name must start with capital letter even if in the list it doesn't
-		filter		|	optional	|	none			    |	object	|	used for filtered query /positive filter	|	Field name must start with capital letter even if in the list it doesn't
+	
+NAME		|	MAN./OPT.	|	DEFAULT			|	TYPE	|	INFO	                  					|	REMARKS
+listName	|	mandatory	|					|	string	|												|
+url			|	optional	|	current url		|	string	|												|
+async		|	optional	|	true			|	boolean	|	asynchronous call							|
+expand		|	optional	|	none			|	array	|	used for lookup and person/group fields 	|	Field name must start with capital letter even if in the list it doesn't
+filter		|	optional	|	none			|	object	|	used for filtered query /positive filter	|	Field name must start with capital letter even if in the list it doesn't
 	
 
 ==EXAMPLE==
-  zGetItems({
-    listName: "name",
+zGetItems({
+	listName: "name",
     url: "https://troom.capgemini.com/sites/testSite/",		//optional
     async: false,								//optional
     expand: ["CreatedBy","ModifiedBy"],					//[fieldName1, fieldName2,...]
@@ -52,7 +53,7 @@ parameter [object]
       Name: "Mietek",							//field name: value
       Age: 18								//field name: value
     }
-  });
+});
  
 2.	zNewItem(parameter) - create new list item in the list and with field values indicated in parameter
 	parameter [object]
